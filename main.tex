@@ -1,0 +1,81 @@
+\documentclass[landscape, paperwidth=60in, paperheight=40in]{baposter}
+% Maximum dimensions: 90in x 48in (243cm x 121cm)
+
+\usepackage{relsize} % For \smaller
+\usepackage{url}     % For \url
+
+\graphicspath{{assets/}} % Root directory of the pictures 
+
+% Colors based on the Omni theme
+\definecolor{background}{HTML}{2d2442}
+\definecolor{comment}{RGB}{72,60,103}
+\definecolor{cyan}{HTML}{86ccd9}
+\definecolor{foreground}{RGB}{225,225,230}
+
+\begin{document}
+	\begin{poster}{
+		grid=false,
+		% Background
+		background=shadeTB,
+		bgColorOne=foreground,
+		bgColorTwo=cyan,
+		% Poster box
+		headershape=rounded,
+		headerColorOne=background,
+		headerColorTwo=background,
+		headerFontColor=foreground,
+		headerfont=\Large\bf,
+		textborder=faded,
+		borderColor=background,
+		headerborder=open
+	}
+	% Eye Cacther
+	{}
+	% Title
+	{\bf
+		\textcolor{background}{Testing a new algorithm for isometric embedding of black hole horizons}
+	}
+	% Authors
+	{
+		\vspace{1em}
+		\textcolor{background}{Iago Braz Mendes, Robert Owen\\
+		{\smaller ibrazmen@oberlin.edu, rowen@oberlin.edu}}
+	}
+	% Logo
+	{
+		\setlength\fboxsep{0pt}
+		\setlength\fboxrule{0.5pt}
+		\begin{minipage}{15em}
+			\includegraphics[width=11em,height=4em]{oberlin-logo}
+			\includegraphics[width=4em,height=4em]{sxs-logo}
+		\end{minipage}
+	}
+		\begin{posterbox}[name=abstract,column=0]{Abstract}
+			Isometric Embedding is a classic problem in differential geometry and general relativity that involves constructing a surface in Euclidean space described by a metric tensor. The results from this problem have a long history for visualization, but are also relevant for calculating quantities like black hole mass and energy. Unfortunately, in general scenarios, this problem requires a solver capable of handling a system of strongly nonlinear and nonstandard PDEs, for which there is no generally established algorithm. We have explored a radically new approach to the embedding problem, applying it to a variety of specific test cases and confirming that the results converge as expected and agree with results obtained analytically and by other algorithms. This poster presents the results of a finite-difference-based C++ code that we have written to implement and test this novel algorithm.
+		\end{posterbox}
+
+		\begin{posterbox}[name=introduction,column=0,below=abstract,above=bottom]{Introduction}
+		\end{posterbox}
+
+		\begin{posterbox}[name=method,column=1,span=2]{Numerical Method}
+			\vspace{25em}
+		\end{posterbox}
+
+		\begin{posterbox}[name=convergence,column=1,below=method,above=bottom]{Convergence Tests}
+		\end{posterbox}
+
+		\begin{posterbox}[name=application,column=2,below=method,above=bottom]{Application to BBHS}
+		\end{posterbox}
+
+		\begin{posterbox}[name=future,column=3]{Future Work}
+			\vspace{20em}
+		\end{posterbox}
+
+		\begin{posterbox}[name=conclusion,column=3,below=future]{Conclusion}
+			\vspace{20em}
+		\end{posterbox}
+
+		\begin{posterbox}[name=references,column=3,below=conclusion,above=bottom]{References}
+		\end{posterbox}
+	\end{poster}
+\end{document}
